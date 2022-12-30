@@ -1,0 +1,139 @@
+
+#include "rlyres.c"
+
+int main()
+{
+    int i,choice;
+    passenger pm;
+    while(TRUE)
+    {
+        addd_trains();
+        choice=enterchoice();
+        switch (choice)
+        {
+        case 1:
+            view_trains();
+            system("cls");
+            break;
+        case 2:
+
+            i=book_ticket(pm);
+            if(i== 1)
+                printf("Ticket booking successfull");
+            getch();
+            break;
+        case 3:
+            {
+                int tno;
+                tno=get_user_ticket_no();
+                view_ticket(tno);
+                getch();
+                break;
+            }
+        case 4:
+           {
+                    system("cls");
+                    char *mob_no;
+                    int* ticket_no;
+                    mob_no=accept_mob_no();
+                    if(mob_no!=NULL)
+                    {
+                        system("cls");
+                        ticket_no=get_ticket_no(mob_no);
+                        view_all_tickets(mob_no,ticket_no);
+                    }
+                    system("color 06");
+                    printf("\n\n\n\n\nPress any key to go back to the main screen");
+                    getch();
+                    break;
+                }
+        case 5:
+            view_all_bookings();
+            break;
+        case 6:
+            {
+                    int tno;
+                    tno=accept_train_no();
+                    if(tno==NULL)
+                    {
+                        system("color 06");
+                        printf("\n\n\n\n\nPress any key to go back to the main menu");
+                        getch();
+                    }
+                    else
+                    {
+                        system("cls");
+                        view_bookings(tno);
+                    }
+                    break;
+                }
+        case 7:
+            {
+                    system("cls");
+                    int* ticket_no;
+                    int result;
+                    ticket_no=get_user_ticket_no();
+                    if(ticket_no!=0)
+                    {
+                        result=cancel_ticket(ticket_no);
+                        system("cls");
+                        if(result==0)
+                        {
+                            system("color 06");
+                            printf("Sorry!No tickets booked against ticket no %d",ticket_no);
+                        }
+                        else if(result==1)
+                        {
+                            system("color 06");
+                            printf("Ticket no %d successfully cancelled!",ticket_no);
+                        }
+                    }
+                    if(ticket_no==0)
+                        printf("\n\n\n");
+                    system("color 06");
+                    printf("\n\nPress any key to go back to the main screen");
+                    getch();
+                    break;
+                }
+        case 8:
+            {
+                    int tno, result;
+                    system("cls");
+                    tno=accept_train_no();
+                    if(tno!=NULL)
+                    {
+                        result=cancel_train(tno);
+                        system("cls");
+                        if(result==0)
+                        {
+                            system("color 06");
+                            printf("Sorry!No tickets booked on train no %s",tno);
+                        }
+                        else if(result==1)
+                        {
+                            system("color 06");
+                            printf("Train no %s successfully cancelled!",tno);
+                        }
+                    }
+                    if(tno==NULL)
+                        printf("\n\n\n");
+                    system("color 06");
+                    printf("\n\nPress any key to go back to the main screen");
+                    getch();
+                    break;
+                }
+        case 9:
+            printf("Thank you for visiting\n");
+            printf("Good Day...\n");
+            exit(1);
+        default:
+            printf("Sorry! invalid choice\n");
+            //getch();
+            //system("cls");
+            //enterchoice();
+            exit(1);
+
+        }
+    }
+    return 0;
+}

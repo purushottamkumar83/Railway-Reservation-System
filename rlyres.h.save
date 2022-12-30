@@ -1,0 +1,40 @@
+struct Train
+{
+    char train_no[10];
+    char from[10];
+    char to[10];
+    int fac_fare;
+    int sac_fare;
+};
+struct Passenger{
+    char p_name[20];
+    char gender;
+    char train_no[20];
+    char p_class;
+    char address[30];
+    char mob_no[11];
+    int age;
+    int ticket_no;
+};
+typedef struct Train Train;
+typedef struct Passenger passenger;
+int enterchoice();
+void addd_trains();
+void view_trains();
+int book_ticket(passenger);
+int get_user_ticket_no();
+void view_ticket(int);
+char* accept_mob_no();
+int* get_ticket_no(char*);
+void view_all_tickets(char* mob_no,int* ticket_no);
+void view_all_bookings();
+void view_bookings(char*);
+int accept_tet_no();
+int cancel_ticket(int);
+int cancel_train(char*);
+void gotoxy(int, int);
+int get_booked_ticket_count(char* train_no ,char t_class);
+int last_ticket_no();
+int check_mob_no(char* mob_no);
+int check_train_no(char* tno);
+

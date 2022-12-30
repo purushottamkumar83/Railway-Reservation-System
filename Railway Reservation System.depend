@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1610938857 source:c:\users\purushottam kumar\documents\progams\d s\railway reservation system\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"rlyres.c"
+
+1610979196 c:\users\purushottam kumar\documents\progams\d s\railway reservation system\rlyres.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	<string.h>
+	"rlyres.h"
+
+1610916326 c:\users\purushottam kumar\documents\progams\d s\railway reservation system\rlyres.h
+
+1610938857 source:c:\users\purushottam kumar\documents\progams\railway reservation system\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	"rlyres.c"
+
+1619784781 c:\users\purushottam kumar\documents\progams\railway reservation system\rlyres.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	<string.h>
+	"rlyres.h"
+
+1610916326 c:\users\purushottam kumar\documents\progams\railway reservation system\rlyres.h
+
+1672083444 source:c:\users\purushottam kumar\onedrive\documents\progams\railway reservation system\main.c
+	"rlyres.c"
+
+1672087702 c:\users\purushottam kumar\onedrive\documents\progams\railway reservation system\rlyres.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	<string.h>
+	"rlyres.h"
+
+1672082831 c:\users\purushottam kumar\onedrive\documents\progams\railway reservation system\rlyres.h
+
